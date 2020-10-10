@@ -16,5 +16,3 @@ const forecast = (latitude,longitude, callback) => {
 }
 
 module.exports = forecast
-
-//  59 with a low of 39
