@@ -10,9 +10,11 @@ const forecast = (latitude,longitude, callback) => {
        } else if (response.body.message){
            callback('cannot find the location, please try a different location!', undefined);
        } else {
-           callback(undefined, 'It is currently ' + response.body.weather[0].description + ', The temperature outside is ' + response.body.main.temp + '.');
+           callback(undefined, 'It is currently ' + response.body.weather[0].description + ', The temperature outside is ' + response.body.main.temp + ' The high today is ' + response.body.main.temp_max + ' with a low of ' + response.body.main.temp_min +'.');
        }
    });
 }
 
 module.exports = forecast
+
+//  59 with a low of 39
